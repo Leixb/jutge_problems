@@ -1,0 +1,1 @@
+/home/leix/Documents/UPC/jutge/Done/P85480_ca_-_Parells_d'una_seqüència_(1).cpp

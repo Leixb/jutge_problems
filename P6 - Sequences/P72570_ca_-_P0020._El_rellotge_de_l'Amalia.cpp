@@ -1,0 +1,1 @@
+/home/leix/Documents/UPC/jutge/Done/P72570_ca_-_P0020._El_rellotge_de_l'Amalia.cpp

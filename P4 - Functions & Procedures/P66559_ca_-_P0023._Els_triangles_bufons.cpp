@@ -1,0 +1,1 @@
+/home/leix/Documents/UPC/jutge/Done/P66559_ca_-_P0023._Els_triangles_bufons.cpp
