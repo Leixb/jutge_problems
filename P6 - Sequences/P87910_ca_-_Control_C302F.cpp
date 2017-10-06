@@ -1,1 +1,0 @@
-/home/leix/Documents/UPC/jutge/Done/P87910_ca_-_Control_C302F.cpp

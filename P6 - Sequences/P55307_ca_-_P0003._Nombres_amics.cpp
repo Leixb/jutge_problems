@@ -1,1 +1,0 @@
-/home/leix/Documents/UPC/jutge/Done/P55307_ca_-_P0003._Nombres_amics.cpp

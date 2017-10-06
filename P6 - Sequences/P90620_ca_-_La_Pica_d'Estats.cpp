@@ -1,1 +1,0 @@
-/home/leix/Documents/UPC/jutge/Done/P90620_ca_-_La_Pica_d'Estats.cpp

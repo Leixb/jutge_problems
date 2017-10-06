@@ -1,1 +1,0 @@
-/home/leix/Documents/UPC/jutge/Done/P57515_ca_-_P0019._Rotacions_cap_a_la_dreta.cpp
