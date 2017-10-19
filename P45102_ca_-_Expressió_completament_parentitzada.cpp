@@ -16,5 +16,5 @@ int aval () {
 }
 
 int main () {
-	cout << aval() << endl;
+    cout << aval() << endl;
 }
