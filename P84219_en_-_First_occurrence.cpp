@@ -7,7 +7,7 @@ int first_occurrence(double x, const vector<double>& v) {
     int L = 0, R = v.size()-1;
     while (L<=R) {
         int M = (L+R)/2;
-        if (v[M]==x and v[M-1]!=x) return M; 
+        if (v[M]==x and v[M-1]!=x) return M;
         else if (v[M] < x) L = M+1;
         else  R = M-1;
     }
