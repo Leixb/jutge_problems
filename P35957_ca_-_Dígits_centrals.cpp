@@ -5,7 +5,7 @@ int main () {
     int n;
     cin >> n;
     char c;
-	string s;
+    string s;
     bool a = true;
     cin >> s;
     if (s.size()%2==0) {
