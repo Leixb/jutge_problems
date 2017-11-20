@@ -3,7 +3,7 @@ using namespace std;
 
 int main () {
     char c;
-    int a=0,b=0,C=0,cont=0;
+    int a=0, b=0, C=0, cont=0;
     while (cin >> c)
         if (c=='-' or c=='.') {
             if (cont == 0);

@@ -29,7 +29,7 @@ int conv(string s) {
 int main () {
     string s;
     while (cin >> s){
-        s.erase(s.end()-1,s.end());
+        s.erase(s.end()-1, s.end());
         cout << s << " = " << conv(s) << endl;
     }
 }

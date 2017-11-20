@@ -2,7 +2,7 @@
 using namespace std;
 
 int main () {
-	int n,cnt = 0,lst=-1;
+    int n,cnt = 0,lst=-1;
     while (cin >> n) {
         cnt++;
         bool t = true;

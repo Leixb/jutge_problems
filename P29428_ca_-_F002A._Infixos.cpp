@@ -29,7 +29,6 @@ bool conte(string s, string p) { // KMP with mem
     return false;
 }
 
-
 int main () {
     int n;
     cin >> n;

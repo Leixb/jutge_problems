@@ -11,7 +11,7 @@ char codificat(char c, int k) {
         c = c%('z'-'a'+1);
         c += 'A';
     }
-    return c;    
+    return c;
 }
 
 int main () {
