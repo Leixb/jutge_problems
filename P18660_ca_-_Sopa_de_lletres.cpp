@@ -1,12 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int m,n;
+int m, n;
 vector <string> sopa;
 vector <vector <bool> > maj;
 
 #define coord pair <int,int>
-
 
 bool match(const string& s, const coord& pos, const coord& des, size_t p=0) {
     if (p==s.size()) return true;
@@ -15,14 +14,6 @@ bool match(const string& s, const coord& pos, const coord& des, size_t p=0) {
     bool ok = match(s,{pos.first+des.first, pos.second + des.second},des,p+1);
     if (ok) maj[pos.first][pos.second]=true;
     return ok;
-}
-
-template <typename T>
-ostream& operator<<(ostream& os, const vector<T>& v) {
-    os << '[';
-    for (size_t i = 0; i < v.size(); ++i) os << " "[i==0] << v[i];
-    os << ']';
-    return os;
 }
 
 int main () {
@@ -37,7 +28,7 @@ int main () {
         for (int i = 0; i < x; ++i) cin >> noms[i];
         for (int i = 0; i < m; ++i)
             for (int j = 0; j < n; ++j) cin >> sopa[i][j];
-        cerr << noms << endl << sopa;
+
         for (int i=0; i < m; ++i) {
             for (int j=0; j < n; ++j) {
                 for (size_t k = 0; k < noms.size(); ++k) {
@@ -47,6 +38,7 @@ int main () {
                 }
             }
         }
+
         for (int i=0; i < m; ++i) {
             for (int j=0; j < n; ++j) {
                 if (j != 0) cout << ' ';
