@@ -7,12 +7,12 @@ vector <vector <bool> > maj;
 
 #define coord pair <int,int>
 
-bool match(const string& s, const coord& pos, const coord& des, size_t p=0) {
+bool match(const string& s, const int& x, const int& y, const coord& des, size_t p=0) {
     if (p==s.size()) return true;
-    if (pos.first >= m or pos.second >= n) return false;
-    if (sopa[pos.first][pos.second] != s[p]) return false;
-    bool ok = match(s,{pos.first+des.first, pos.second + des.second},des,p+1);
-    if (ok) maj[pos.first][pos.second]=true;
+    if (x >= m or y >= n) return false;
+    if (sopa[x][y] != s[p]) return false;
+    bool ok = match(s,x+des.first, y + des.second,des,p+1);
+    if (ok) maj[x][y]=true;
     return ok;
 }
 
@@ -32,9 +32,9 @@ int main () {
         for (int i=0; i < m; ++i) {
             for (int j=0; j < n; ++j) {
                 for (size_t k = 0; k < noms.size(); ++k) {
-                    match(noms[k],{i,j},{0,1});
-                    match(noms[k],{i,j},{1,0});
-                    match(noms[k],{i,j},{1,1});
+                    match(noms[k],i,j,{0,1});
+                    match(noms[k],i,j,{1,0});
+                    match(noms[k],i,j,{1,1});
                 }
             }
         }
