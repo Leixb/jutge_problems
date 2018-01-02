@@ -6,7 +6,7 @@ struct Punt {
 };
 
 double distancia(const Punt& a, const Punt& b) {
-    return sqrt(pow(a.x-b.x,2) + pow(a.y-b.y,2));
+    return hypot(a.x-b.x, a.y-b.y);
 }
 
 void desplaca(Punt& p1, const Punt& p2) {
@@ -49,7 +49,7 @@ int main () {
         desplaca(p,desp);
 
         bool dins = es_interior(p,c);
-        if (dins_prev != dins) {
+        if (dins_prev ^ dins) {
             cout << "al pas " << i << " ha " 
                  << ((dins)? "entrat a dins": "sortit a fora") << endl;
             dins_prev = dins;

@@ -15,6 +15,5 @@ bool paren_ok(const string& s) {
 }
 
 int main () {
-    for (string s; cin >> s;) cout << (paren_ok(s)? "si" : "no") << endl;
+    for (string s; cin >> s;) cout << (paren_ok(s)? "correct" : "incorrect") << endl;
 }
-
