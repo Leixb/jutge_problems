@@ -7,19 +7,11 @@ typedef vector<vector<int> > Matrix;
 // result: boolean, true iff the matrix is doubling
 bool doublingmatrix(const Matrix& M) {
 
-    if (M.size() == 0 or M[0].size() == 0) return true;
-
-    for (size_t i = 0; i < M[0].size(); ++i) {
-        int mul = M[0][i]*2;
-        for (size_t j = 1; j < M.size(); ++j, mul*=2)
-            if (M[j][i] != mul) return false;
-    }
-
-    for (size_t i = 0; i < M.size(); ++i) {
-        int mul = M[i][0]*2;
-        for (size_t j = 1; j < M[0].size(); ++j, mul*=2)
-            if (M[i][j] != mul) return false;
-    }
+    for (size_t i = 0; i < M.size(); ++i)
+        for (size_t j = 0; j < M[0].size(); ++j) {
+            if (i and M[i][j] != 2*M[i-1][j]) return false;
+            if (j and M[i][j] != 2*M[i][j-1]) return false;
+        }
 
     return true;
 }
