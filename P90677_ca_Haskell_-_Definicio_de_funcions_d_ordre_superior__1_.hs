@@ -21,10 +21,12 @@ myFilter :: (a -> Bool) -> [a] -> [a]
 myFilter f l = [ x | x <- l, f x ]
 
 myAll :: (a -> Bool) -> [a] -> Bool
-myAll f l = foldr (\a b -> f a && b) True l
+--myAll f = foldr (\a b -> f a && b) True
+myAll f = foldr ((&&) . f) True
 
 myAny :: (a -> Bool) -> [a] -> Bool
-myAny f l = foldr (\a b -> f a || b) False l
+--myAny f = foldr (\a b -> f a || b) False
+myAny f = foldr ((||) . f) False
 
 myZip :: [a] -> [b] -> [(a, b)]
 myZip _ [] = []

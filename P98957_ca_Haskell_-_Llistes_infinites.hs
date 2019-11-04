@@ -24,7 +24,8 @@ primes :: [Integer]
 primes = primes' (drop 2 nats)
     where
         primes' :: [Integer] -> [Integer] -- Eratostenes sieve
-        primes' (x:xs) = x: primes' (filter (\a -> a `mod` x /= 0) xs)
+        --primes' (x:xs) = x: primes' (filter (\a -> a `mod` x /= 0) xs)
+        primes' (x:xs) = x: primes' (filter ((/= 0) . flip mod x) xs)
 
 hammings :: [Integer]
 hammings = 1 : merge ham2 (merge ham3 ham5)
@@ -56,7 +57,8 @@ lookNsay = iterate say 1
         digits x = digits (x `div` 10) ++ [x `mod` 10]
 
         mergedigits :: [Integer] -> Integer
-        mergedigits =  foldl (\a b-> a*10+b) 0
+        --mergedigits =  foldl (\a b-> a*10+b) 0
+        mergedigits =  foldl ((+) . (*10)) 0
 
 tartaglia :: [[Integer]]
 tartaglia = iterate (\l -> zipWith (+) (0:l) (l++[0])) [1]

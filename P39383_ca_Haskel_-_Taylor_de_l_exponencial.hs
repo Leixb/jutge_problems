@@ -6,7 +6,8 @@ exps x = map terme [0..]
 
         terme :: Int -> Float
         terme 0 = 1
-        terme i = (terme (i-1))*x/fromIntegral i
+        terme i = terme (i-1)*x/fromIntegral i
 
 exponencial :: Float -> Float -> Float
-exponencial x e = sum $ takeWhile (\n -> abs n>=e) $ exps x
+--exponencial x e = sum $ takeWhile (\n -> abs n>=e) $ exps x
+exponencial x e = sum $ takeWhile ((>= e) . abs) $ exps x
